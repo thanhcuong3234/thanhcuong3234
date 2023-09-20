@@ -1,0 +1,98 @@
+body
+{
+  background-color: black;
+  background-size: cover;
+  background-position-y:-100px;
+}
+.container
+{
+  max-width: 960px; /*cach nhau 960px*/
+  margin: 0px auto;
+}
+nav
+{
+  display: flex; /*xuất hiện trên một hàng*/
+  justify-content: center;
+  justify-items: center;/*đẩy 2 đầu ra 2 bên*/
+}
+#logo
+{
+  padding: 5px 0px; /*tren duoi phai trai*/
+}
+#logo img
+{
+  max-width: 50px;
+  height: auto;
+}
+#main-menu
+{
+  display: flex; /* bảng chọn nằm ngamg*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0px solid #333;
+
+}
+#main-menu
+{
+  position: relative;
+}
+#main-menu li a
+{
+  color: #f8f8f8;
+  display: block;
+  padding: 18px 20px;
+}
+#main-menu ul.sub-menu
+{
+  position: absolute;
+  background-color: black;
+  padding: 15px 0px;
+  list-style: none;
+  width: 200px;
+  border: 1px solid #333;
+  display: none;
+}
+#main-menu li:hover>ul.sub-menu
+{
+  display: block;
+}
+#main-menu ul.sub-menu a
+{
+  padding: 8px 15px;
+  border-bottom: 1px solid #333;
+  left: 0;
+}
+#main-menu ul.sub-menu li:hover a
+{
+  border-bottom: 1px solid #5c5c5c;
+}
+#main-menu ul.sub-menu li:last-child a
+{
+  border: none;
+}
+#main-menu ul.sub-menu ul.sub-menu 
+{
+  left: 200px;
+  top: -35px;
+}
+/* thiet lap khi hover */
+#main-menu>li>a
+{
+  position: relative;
+}
+#main-menu>li>a::before
+{
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: #f00;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+}
+#main-menu>li:hover>a::before
+{
+  display: block;
+}
